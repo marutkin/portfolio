@@ -1,0 +1,31 @@
+@import "variables";
+/********BREAKPOINTS********/
+@mixin Desktop {
+  @media only screen and (min-width: ($screen-tablet-max + 1)) {
+    @content;
+  }
+}
+
+@mixin Tablet {
+  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-tablet-max) {
+    @content;
+  }
+}
+
+@mixin Phone {
+  @media (max-width: $screen-xs-max){
+    @content;
+  }
+}
+
+@mixin Phone-Landscape {
+  @media (max-width: $screen-xs-max) and (orientation:landscape) {
+    @content;
+  }
+}
+
+@mixin IE_11_only{
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
