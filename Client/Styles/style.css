@@ -73,7 +73,16 @@ img {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: proxima-nova, monospace;
+}
+
+.slide {
+  animation: slideInLeft 0.75s ease both;
+}
+
+.image-small {
+  width: 35px;
+  height: 35px;
 }
 
 .navigation {
@@ -273,8 +282,17 @@ body {
 }
 
 .skills {
-  height: 50vh;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
   background-color: #fff;
+  position: relative;
+  bottom: -20px;
+}
+@media only screen and (min-width: 1025px) {
+  .skills {
+    border-radius: 10px;
+  }
 }
 
 .panel {
@@ -285,12 +303,12 @@ body {
   bottom: 30px;
   background-color: #fff;
   border-radius: 10px;
-  display: flex;
   justify-content: space-around;
 }
 @media only screen and (min-width: 1025px) {
   .panel {
     bottom: 50px;
+    display: flex;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -309,13 +327,16 @@ body {
   }
 }
 .panel__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 10px;
 }
-.panel__column__skill--title {
-  width: 50px;
-  height: 50px;
+@media only screen and (min-width: 1025px) {
+  .panel__column {
+    padding: 35px;
+  }
 }
-
 .contact {
   height: 50vh;
   background-color: #DEB887;

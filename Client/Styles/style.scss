@@ -15,7 +15,15 @@
 
 //Global
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: proxima-nova, monospace;
+  //font-family: 'Open Sans', sans-serif;
+}
+.slide {
+  animation: slideInLeft .75s ease both;
+}
+.image-small {
+  width: 35px;
+  height: 35px;
 }
 
 //Navigation
@@ -225,14 +233,22 @@ body {
 
 //Skills section
 .skills {
-  height: 50vh;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
   background-color: $white;
+  position: relative;
+  bottom: -20px;
+  @include Desktop() {
+    border-radius: 10px;
+  }
 }
 
 .panel {
   max-width: 960px;
   @include Desktop() {
     bottom: 50px;
+    display: flex;
   }
   @include Tablet() {
     max-width: 600px;
@@ -249,14 +265,18 @@ body {
   bottom: 30px;
   background-color: $white;
   border-radius: 10px;
-  display: flex;
   justify-content: space-around;
   &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 10px;
+    @include Desktop(){
+      padding: 35px;
+    }
     &__skill {
       &--title {
-        width: 50px;
-        height: 50px;
+
       }
     }
   }
