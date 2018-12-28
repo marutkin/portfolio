@@ -1,19 +1,3 @@
-function fadeIn(element, time) {
-    let last = +new Date();
-    let tick = function() {
-        element.style.opacity = String(Number(element.style.opacity) + (new Date() - last) / time);
-        last = +new Date();
-
-        if (Number(element.style.opacity) < 1) {
-            (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
-        }
-    };
-    tick();
-}
-function hide(element){
-    element.style.opacity = '0';
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     // Elements
     let skillsElement = document.getElementById("skills");
@@ -34,3 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
         lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     }, false);
 });
+
+function fadeIn(element, time) {
+    let last = +new Date();
+    let tick = function() {
+        element.style.opacity = String(Number(element.style.opacity) + (new Date() - last) / time);
+        last = +new Date();
+
+        if (Number(element.style.opacity) < 1) {
+            (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+        }
+    };
+    tick();
+}
+function hide(element){
+    element.style.opacity = '0';
+}

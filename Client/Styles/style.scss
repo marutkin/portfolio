@@ -12,6 +12,9 @@
 .font-color-main {
   color: $main-color;
 }
+.font-color-brown {
+  color: #A52A2A;
+}
 
 //Global
 body {
@@ -284,6 +287,9 @@ body {
 
 //Contact section
 .contact {
-  height: 50vh;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
   background-color: $main-color;
 }

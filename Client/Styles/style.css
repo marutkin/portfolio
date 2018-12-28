@@ -72,6 +72,10 @@ img {
   color: #DEB887;
 }
 
+.font-color-brown {
+  color: #A52A2A;
+}
+
 body {
   font-family: proxima-nova, monospace;
 }
@@ -338,7 +342,10 @@ body {
   }
 }
 .contact {
-  height: 50vh;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
   background-color: #DEB887;
 }
 
