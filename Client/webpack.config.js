@@ -1,4 +1,4 @@
-"use strict";
+
 const path = require("path");
 const fs = require("fs");
 const webpack = require("webpack");
@@ -16,7 +16,7 @@ const extractSass = new ExtractTextPlugin({
 
 const config = {
   entry: {
-    app: "./src/index.js"
+    app: "./src/AppStart.js"
   },
   output: {
     filename: "bundle.js",
@@ -71,7 +71,7 @@ const config = {
   plugins: [
     extractSass,
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/AppView.html",
     })
   ],
   devServer: {

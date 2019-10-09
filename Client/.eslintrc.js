@@ -4,14 +4,14 @@
 module.exports = {
   "parser": "babel-eslint",
   "parserOptions": {
-    "sourceType": "script",
+    "sourceType": "module",
     "ecmaVersion": 9
   },
   "env": {
     "es6": true,
     "node": true
   },
-  "plugins": ["promise"],
+  "plugins": ["promise", "import"],
   "extends": [
     "eslint:recommended",
     "plugin:import/recommended",
