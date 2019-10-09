@@ -1,0 +1,13 @@
+
+.vscode
+
+Client/src/js/lib/vendor/**/*.js
+
+# Those are almost completely copy paste code
+# don't wanna lint those, dont't wana touch those too...
+Client/src/js/cms/modules/catalogUITweaks/**/*.js
+Client/src/js/cms/modules/getaTags/**/*.js
+Client/src/js/cms/modules/skuStocksInStoreList/**/*.js
+Client/src/js/cms/modules/skuPricesInStoreList/**/*.js
+Client/src/js/migration/slideshow.js
+Client/src/js/slideshow/**/*.js

@@ -1,0 +1,24 @@
+@import "mixins";
+@import "reset";
+@import "scrollbar";
+@import "variables";
+
+@import "./components/mainContainer.scss";
+
+//Fonts
+.font-tiny {
+  font-size: $tiny-font-size;
+  letter-spacing: 1px;
+}
+
+.font-color-main {
+  color: $main-color;
+}
+.font-color-brown {
+  color: #A52A2A;
+}
+
+//Global
+body {
+  font-family: proxima-nova, monospace;
+}
