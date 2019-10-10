@@ -1,24 +1,18 @@
-@import "mixins";
-@import "reset";
-@import "scrollbar";
-@import "variables";
 
-@import "./components/mainContainer.scss";
+@import "./common/mixins";
+@import "./common/reset";
+@import "./common/scrollbar";
+@import "./common/variables";
+@import "./common//divider";
 
-//Fonts
-.font-tiny {
-  font-size: $tiny-font-size;
-  letter-spacing: 1px;
-}
+@import "./components/AppContainer";
 
-.font-color-main {
-  color: $main-color;
-}
-.font-color-brown {
-  color: #A52A2A;
-}
+@import "./components/Header";
+@import "./components/Navigation";
+@import "./components/Footer";
 
 //Global
 body {
-  font-family: proxima-nova, monospace;
+    font-family: proxima-nova, monospace;
+    background-color: $main-color;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 
 import Footer from "./Footer.jsx";
@@ -9,7 +10,9 @@ class AppContainer extends React.Component {
     return (
       <article className="app-container">
         <Header/>
+        <div className="divider"/>
         <Navigation/>
+        <div className="divider"/>
         <Footer/>
       </article>
     );

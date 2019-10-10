@@ -1,11 +1,15 @@
 import React from "react";
 
+import data from "../helpers/dataProvider";
+
 class Header extends React.Component {
   render() {
     return (
-      <div className="Header">
-        Header
-      </div>
+      <header className="header">
+        <h1 className="elegantshadow">
+          {data.header.title}
+        </h1>
+      </header>
     );
   }
 }

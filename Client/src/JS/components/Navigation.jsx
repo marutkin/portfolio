@@ -3,9 +3,9 @@ import React from "react";
 class Navigation extends React.Component {
   render() {
     return (
-      <div className="Navigation">
+      <nav className="navigation">
         Navigation
-      </div>
+      </nav>
     );
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 export function $(selector, parent) {
   return (parent ? parent : document).querySelector(selector);
