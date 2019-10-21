@@ -2,8 +2,9 @@
 @import "./common/mixins";
 @import "./common/reset";
 @import "./common/scrollbar";
-@import "./common/variables";
-@import "./common//divider";
+@import "./common/divider";
+@import "./common/colors";
+@import "./common/sizes";
 
 @import "./components/AppContainer";
 
@@ -11,8 +12,10 @@
 @import "./components/Navigation";
 @import "./components/Footer";
 
-//Global
 body {
-    font-family: proxima-nova, monospace;
-    background-color: $main-color;
+    color: $palette-color1;
+    background-color: $palette-color3;
+    .header {
+        color: $palette-color5;
+    }
 }

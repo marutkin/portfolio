@@ -1,5 +1,6 @@
-@import "variables";
-/********BREAKPOINTS********/
+
+@import "sizes";
+/* Breakpoints */
 @mixin Desktop {
   @media only screen and (min-width: ($screen-tablet-max + 1)) {
     @content;
@@ -28,4 +29,18 @@
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @content;
   }
+}
+
+/* Helper functions  */
+$default-font-size: 16px;
+@function rem($pixels, $context: $default-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
 }

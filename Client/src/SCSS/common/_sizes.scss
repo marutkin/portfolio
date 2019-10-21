@@ -1,0 +1,14 @@
+/* Sizes */
+$tiny-font-size: rem(10px);
+$thick: 3px;
+$pad: 0.7em;
+$extra: calc(#{$pad} * 1.2);
+
+/*  Screen Sizes    */
+$screen-xs-min: 375px !default;
+$screen-xs: 540px !default;
+$screen-sm-min: 768px !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-tablet-max: 1024px !default;
+$screen-lg: 1200px !default;
+$screen-xl: 1440px !default;
