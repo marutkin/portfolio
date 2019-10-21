@@ -1,6 +1,9 @@
 
+@import "colors";
+
 .divider {
     width: 100%;
     height: rem(2px);
-    background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+    background-color: $palette-color1;
+    // background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
 }
