@@ -5,6 +5,13 @@ $thick: 3px;
 $pad: 0.7em;
 $extra: calc(#{$pad} * 1.2);
 
+/* Font Sizes */
+$font-standart: rem(16px);
+$font-s: rem(10px);
+$font-m: rem(18px);
+$font-l: rem(24px);
+$font-xl: rem(36px);
+
 /*  Screen Sizes    */
 $screen-xs-min: 375px !default;
 $screen-xs: 540px !default;

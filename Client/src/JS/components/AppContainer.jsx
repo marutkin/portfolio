@@ -10,9 +10,7 @@ class AppContainer extends React.Component {
     return (
       <article className="app-container">
         <Header/>
-        <div className="divider"/>
         <Navigation/>
-        <div className="divider"/>
         <Footer/>
       </article>
     );

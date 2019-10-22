@@ -1,13 +1,14 @@
 
 {
     "header": {
-        "title": "Front-End Developer"
+        "title": "Header title",
+        "contactBtn": "Contact"
     },
     "nav": {
 
     },
     "content": {
-        
+
     },
     "footer": {
 

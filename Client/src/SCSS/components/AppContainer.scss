@@ -1,6 +1,13 @@
 
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 .app-container {
   max-width: rem(1024px);
   margin: 0 auto;
-  font-family: proxima-nova, monospace;
+  font-family: 'Comfortaa', cursive;
+
+  .block {
+    margin: rem(15px) 0 0;
+  }
+
 }
