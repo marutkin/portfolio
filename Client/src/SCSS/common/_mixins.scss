@@ -1,5 +1,6 @@
 
 @import "sizes";
+
 /* Breakpoints */
 @mixin Desktop {
   @media only screen and (min-width: ($screen-tablet-max + 1)) {

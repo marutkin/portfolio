@@ -1,4 +1,5 @@
 
+/* Common */
 @import "./common/mixins";
 @import "./common/reset";
 @import "./common/scrollbar";
@@ -6,16 +7,19 @@
 @import "./common/colors";
 @import "./common/sizes";
 
+/* Elements */
+@import "./common/elements/button.scss";
+@import "./common/elements/header.scss";
+
+/* Components */
 @import "./components/AppContainer";
 
 @import "./components/Header";
 @import "./components/Navigation";
 @import "./components/Footer";
 
+/* Global */
 body {
-    color: $palette-color1;
-    background-color: $palette-color3;
-    .header {
-        color: $palette-color5;
-    }
+  color: $palette-color1;
+  background-color: $palette-color3;
 }
