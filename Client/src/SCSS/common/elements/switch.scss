@@ -1,0 +1,32 @@
+
+@import '../colors';
+@import '../sizes';
+
+.switch-language {
+
+  cursor: pointer;
+
+  min-width: rem(80px);
+
+  font-size: $font-m;
+
+  &__option {
+
+    padding: rem(7px);
+    background-color: $palette-color2;
+
+    &:hover {
+      background-color: $palette-color4;
+      color: $black;
+    }
+
+    &--selected {
+      background-color: $palette-color1;
+      &:hover {
+        background-color: $palette-color1;
+        color: $white;
+      }
+    }
+  }
+}
+

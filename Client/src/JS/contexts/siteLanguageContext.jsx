@@ -2,21 +2,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import dictionary from "../dictionaries/basicDictionary";
+import dictionaryEn from "../dictionaries/basicDictionaryEn";
+import dictionaryRu from "../dictionaries/basicDictionaryRu";
 
-// Context is made up of two things
-// Provider - Single as close to top level as possible
-// Consumer - Multiple have multiple consumers
+const DICTIONARY = {
+  en: dictionaryEn,
+  ru: dictionaryRu
+};
+
 export const LanguageContext = React.createContext();
 
 export class LanguageProvider extends React.Component {
   constructor() {
     super();
     this.state = {
-      language: dictionary.en
+      language: DICTIONARY.en
     };
     this.handleThemeChange = (key) => {
-      const language = dictionary[key];
+      const language = DICTIONARY[key];
       this.setState({ language });
     };
   }

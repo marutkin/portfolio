@@ -71,6 +71,8 @@
 
   &--contact {
 
+    min-width: rem(310px);
+
     /* Local options */
     $colorLeft: $palette-color1;
     $colorRight: $palette-color2;

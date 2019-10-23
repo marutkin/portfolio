@@ -1,22 +1,50 @@
+
 import React from "react";
+
+const languageOptions = [ "en", "ru" ];
 
 class Header extends React.Component {
 
+  constructor() {
+    super();
+    this.state = { language: "en" };
+    this.handleSwitchClick = this.handleSwitchClick.bind(this);
+  }
+
+  handleSwitchClick(languageKey) {
+    this.setState({
+      language: languageKey
+    });
+    this.props.languageSwitchHandler(languageKey);
+  }
+
   render() {
-    const { language, languageSwitchHandler } = this.props;
+    const { language: { header: {
+      title, contactBtn, switchEn, switchRu
+    }}} = this.props;
+    const [ en, ru ] = languageOptions;
     return (
       <header className="header block">
-        <h1 className="header__title">
-          {this.context.language}
-          {language.header.title}
+
+        <h1 data-title = {this.state.language} className="header__title">
+          {title}
         </h1>
-        <div className="switch-language">
-          <span onClick = {() => languageSwitchHandler("en")} className="switch-language__option">EN</span>
-          <span onClick = {() => languageSwitchHandler("ru")} className="switch-language__option">RU</span>
-        </div>
+
         <a className="button button--contact" href="#">
-          {language.header.contactBtn}
+          {contactBtn}
         </a>
+
+        <div className="switch-language">
+          <span onClick = {this.handleSwitchClick.bind(this, en)}
+            className={`switch-language__option ${this.state.language === en ? "switch-language__option--selected" : ""}`}>
+            {switchEn}
+          </span>
+          <span onClick = {this.handleSwitchClick.bind(this, ru)}
+            className={`switch-language__option ${this.state.language === ru ? "switch-language__option--selected" : ""}`}>
+            {switchRu}
+          </span>
+        </div>
+
       </header>
     );
   }

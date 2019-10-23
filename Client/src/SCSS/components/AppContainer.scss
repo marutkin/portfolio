@@ -1,6 +1,8 @@
 
-
 .app-container {
+
+  @include fadein(1s);
+
   max-width: rem(1024px);
   margin: 0 auto;
 

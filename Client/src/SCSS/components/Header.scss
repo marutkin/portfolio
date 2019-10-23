@@ -1,5 +1,49 @@
 
-
 .header {
+
+  user-select: none;
+
   font-size: rem(24px);
+  color: $white;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: rem(100px);
+
+  &__title {
+
+    min-width: rem(435px);
+
+    font-size: $font-xl;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+
+    &:before,
+    &:after {
+      content: "";
+      position: relative;
+      display: block;
+      width: 5rem;
+      background-color: transparent;
+      height: 4px;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      top: 50%;
+      margin-bottom: -4px;
+    }
+
+    &:before {
+      left: -.5rem;
+    }
+
+    &:after {
+      right: -.5rem;
+    }
+  }
+
 }

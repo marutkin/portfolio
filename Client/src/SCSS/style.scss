@@ -8,12 +8,11 @@
 @import "./common/sizes";
 
 /* Elements */
-@import "./common/elements/button.scss";
-@import "./common/elements/header.scss";
+@import "./common/elements/button";
+@import "./common/elements/switch";
 
 /* Components */
 @import "./components/AppContainer";
-
 @import "./components/Header";
 @import "./components/Navigation";
 @import "./components/Footer";
