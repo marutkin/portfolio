@@ -5,16 +5,22 @@ import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
 import Navigation from "./Navigation.jsx";
 
-class AppContainer extends React.Component {
-  render() {
-    return (
-      <article className="app-container">
-        <Header/>
-        <Navigation/>
-        <Footer/>
-      </article>
-    );
-  }
-}
+import { LanguageContext } from "../contexts/siteLanguageContext.jsx";
+
+const AppContainer = () => {
+  return (
+    <LanguageContext.Consumer>
+      {
+        ({ language, handleThemeChange }) => (
+          <article className="app-container">
+            <Header language = {language} languageSwitchHandler = {handleThemeChange} />
+            <Navigation/>
+            <Footer/>
+          </article>
+        )
+      }
+    </LanguageContext.Consumer>
+  );
+};
 
 export default AppContainer;

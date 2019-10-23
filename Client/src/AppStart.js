@@ -4,6 +4,7 @@ import React from "react";
 import { render } from "react-dom";
 import { $ } from "./JS/helpers/domUtils";
 
+import { LanguageProvider } from "./JS/contexts/siteLanguageContext.jsx";
 import AppContainer from "./JS/components/AppContainer.jsx";
 
 import "./SCSS/style.scss";
@@ -14,4 +15,8 @@ if (!container) {
   throw new Error("[AppStart]: No container provided!");
 }
 
-render(<AppContainer/>, $(".js-app-entry"));
+render(
+  <LanguageProvider>
+    <AppContainer />
+  </LanguageProvider>,
+  $(".js-app-entry"));

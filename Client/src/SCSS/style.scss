@@ -19,7 +19,4 @@
 @import "./components/Footer";
 
 /* Global */
-body {
-  color: $palette-color1;
-  background-color: $palette-color3;
-}
+@import "./common/global";

@@ -1,16 +1,21 @@
 import React from "react";
 
-import data from "../helpers/dataProvider";
-
 class Header extends React.Component {
+
   render() {
+    const { language, languageSwitchHandler } = this.props;
     return (
       <header className="header block">
         <h1 className="header__title">
-          {data.header.title}
+          {this.context.language}
+          {language.header.title}
         </h1>
-        <a class="button button--contact" href="#">
-          {data.header.contactBtn}
+        <div className="switch-language">
+          <span onClick = {() => languageSwitchHandler("en")} className="switch-language__option">EN</span>
+          <span onClick = {() => languageSwitchHandler("ru")} className="switch-language__option">RU</span>
+        </div>
+        <a className="button button--contact" href="#">
+          {language.header.contactBtn}
         </a>
       </header>
     );
