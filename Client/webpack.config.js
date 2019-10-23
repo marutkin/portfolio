@@ -78,7 +78,7 @@ const config = {
     contentBase: distPath,
     compress: true,
     open: true,
-    port: 9000
+    port: 3302
   }
 };
 

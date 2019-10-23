@@ -8,14 +8,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "npm install",
     "build": "cd Client && cross-env production=true webpack --config ./webpack.config.js --progress --colors",
-    "prestart": "npm install",
+    "prestart": "npm build",
     "start": "cd Client && webpack-dev-server --colors --hot --progress"
   },
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
+    "node-sass": "^4.12.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^5.0.1"
@@ -40,7 +40,6 @@
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^5.0.0",
     "lodash": "^4.17.4",
-    "node-sass": "^4.12.0",
     "request": "^2.81.0",
     "resolve-url-loader": "^3.1.0",
     "sass-loader": "^7.1.0",
