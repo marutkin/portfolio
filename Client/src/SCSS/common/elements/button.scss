@@ -80,14 +80,23 @@
 
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: 700;
     position: relative;
     letter-spacing: 0.25em;
     padding: 1rem 5.25rem;
     background: transparent;
     outline: none;
-    font-size: rem(20px);
+
     color: $textColor;
+    font-weight: 700;
+    font-size: rem(20px);
+
+    @include Phone {
+      font-size: $font-m;
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
 
     &::after,
     &::before {

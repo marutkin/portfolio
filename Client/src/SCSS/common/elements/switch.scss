@@ -10,6 +10,12 @@
 
   font-size: $font-m;
 
+  @include Phone {
+    position: fixed;
+    top: rem(7px);
+    right: rem(-4px);
+  }
+
   &__option {
 
     padding: rem(7px);

@@ -11,6 +11,11 @@
   justify-content: space-between;
   align-items: center;
 
+  @include Phone() {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
   min-height: rem(100px);
 
   &__title {
@@ -18,6 +23,16 @@
     min-width: rem(435px);
 
     font-size: $font-xl;
+
+    @include Tablet {
+      font-size: $font-l;
+    }
+
+    @include Phone {
+      min-width: inherit;
+      font-size: $font-m;
+    }
+
     text-transform: uppercase;
 
     display: flex;
@@ -44,6 +59,7 @@
     &:after {
       right: -.5rem;
     }
+
   }
 
 }

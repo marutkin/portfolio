@@ -33,8 +33,7 @@
 }
 
 /* Helper functions  */
-$default-font-size: 16px;
-@function rem($pixels, $context: $default-font-size) {
+@function rem($pixels, $context: $font-standart) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
   }
