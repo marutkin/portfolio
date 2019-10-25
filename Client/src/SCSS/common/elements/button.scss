@@ -1,13 +1,15 @@
 
 .button {
 
-  background: none;
-  border: none;
+  font: inherit;
   cursor: pointer;
   line-height: 1.5;
-  font: 700 1.2rem;
-  padding: 1em 2em;
   letter-spacing: 0.05rem;
+
+  background: none;
+  border: none;
+
+  padding: 1em 2em;
 
   &--border {
 
@@ -90,14 +92,6 @@
     font-weight: 700;
     font-size: rem(20px);
 
-    @include Phone {
-      font-size: $font-m;
-      &::after,
-      &::before {
-        display: none;
-      }
-    }
-
     &::after,
     &::before {
       content: "";
@@ -130,6 +124,20 @@
       &::before {
         left: 8.75rem;
       }
+    }
+
+  }
+
+  &--only-desktop {
+    @include Tablet-Phone {
+      display: none;
+    }
+  }
+
+  &--only-mobile {
+    display: none;
+    @include Tablet-Phone {
+      display: block;
     }
   }
 

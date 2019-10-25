@@ -3,11 +3,30 @@
 
   @include fadein(1s);
 
-  max-width: rem(1024px);
+  max-width: $screen-lg;
+
+  @include Tablet {
+    max-width: $screen-sm-min;
+  }
+
+  @include Phone {
+    max-width: $screen-xs-min;
+  }
+
   margin: 0 auto;
 
   .block {
+
     margin: rem(15px) 0 0;
+
+    @include Tablet {
+      margin-top: $block-margin-tablet;
+    }
+
+    @include Phone {
+      margin-top: $block-margin-phone;
+    }
+
   }
 
 }

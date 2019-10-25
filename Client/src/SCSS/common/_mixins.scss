@@ -15,7 +15,16 @@
 }
 
 @mixin Phone {
-  @media (max-width: $screen-xs-max){
+  @media (max-width: $screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin Tablet-Phone {
+  @include Tablet {
+    @content;
+  }
+  @include Phone {
     @content;
   }
 }

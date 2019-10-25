@@ -9,3 +9,15 @@ body {
   background-color: $palette-color3;
 
 }
+
+.mix-margin {
+  margin: rem(15px) 0 0;
+
+  @include Tablet {
+    margin-top: $block-margin-tablet;
+  }
+
+  @include Phone {
+    margin-top: $block-margin-phone;
+  }
+}

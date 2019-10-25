@@ -1,10 +1,4 @@
 
-/* Sizes */
-$tiny-font-size: rem(10px);
-$thick: 3px;
-$pad: 0.7em;
-$extra: calc(#{$pad} * 1.2);
-
 /* Font Sizes */
 $font-standart: 16px;
 $font-s: rem(12px);
@@ -13,10 +7,15 @@ $font-l: rem(24px);
 $font-xl: rem(36px);
 
 /*  Screen Sizes    */
-$screen-xs-min: 375px !default;
-$screen-xs: 540px !default;
-$screen-sm-min: 768px !default;
-$screen-xs-max: ($screen-sm-min - 1) !default;
-$screen-tablet-max: 1024px !default;
-$screen-lg: 1200px !default;
-$screen-xl: 1440px !default;
+$screen-xs-min: rem(375px);
+$screen-xs: rem(540px);
+$screen-sm-min:  rem(768px);
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-tablet-max:  rem(1024px);
+$screen-lg:  rem(1200px);
+$screen-xl:  rem(1440px);
+
+/* Margins */
+$block-margin: rem(15px);
+$block-margin-tablet: rem(12px);
+$block-margin-phone: rem(8px);

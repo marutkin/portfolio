@@ -1,6 +1,9 @@
 
 import React from "react";
 
+// eslint-disable-next-line no-unused-vars
+import { LanguageContext } from "../contexts/siteLanguageContext.jsx";
+
 const languageOptions = [ "en", "ru" ];
 
 class Header extends React.Component {
@@ -11,41 +14,48 @@ class Header extends React.Component {
     this.handleSwitchClick = this.handleSwitchClick.bind(this);
   }
 
-  handleSwitchClick(languageKey) {
-    this.setState({
-      language: languageKey
-    });
-    this.props.languageSwitchHandler(languageKey);
+  handleSwitchClick(languageKey, callBack) {
+    this.setState({ language: languageKey });
+    callBack(languageKey);
   }
 
   render() {
-    const { language: { header: {
-      title, contactBtn, switchEn, switchRu
-    }}} = this.props;
     const [ en, ru ] = languageOptions;
+    const { language: stateLanguage } = this.state;
     return (
-      <header className="header block">
+      <LanguageContext.Consumer>
+        {
+          ({ language: { header: { title, contactBtn, switchEn, switchRu }}, handleThemeChange }) => (
 
-        <h1 data-title = {this.state.language} className="header__title">
-          {title}
-        </h1>
+            <header className="header block">
 
-        <a className="button button--contact" href="#">
-          {contactBtn}
-        </a>
+              <h1 data-title = {stateLanguage} className="header__title">
+                {title}
+              </h1>
 
-        <div className="switch-language">
-          <span onClick = {this.handleSwitchClick.bind(this, en)}
-            className={`switch-language__option ${this.state.language === en ? "switch-language__option--selected" : ""}`}>
-            {switchEn}
-          </span>
-          <span onClick = {this.handleSwitchClick.bind(this, ru)}
-            className={`switch-language__option ${this.state.language === ru ? "switch-language__option--selected" : ""}`}>
-            {switchRu}
-          </span>
-        </div>
+              <button className="button button--contact button--only-desktop" href="#">
+                {contactBtn}
+              </button>
 
-      </header>
+              <button className="button button--border button--only-mobile mix-margin">
+                {contactBtn}
+              </button>
+
+              <article className="switch-language">
+                <span onClick = {this.handleSwitchClick.bind(this, en, handleThemeChange)}
+                  className={`switch-language__option ${stateLanguage !== en || "switch-language__option--selected"}`}>
+                  {switchEn}
+                </span>
+                <span onClick = {this.handleSwitchClick.bind(this, ru, handleThemeChange)}
+                  className={`switch-language__option ${stateLanguage !== ru || "switch-language__option--selected"}`}>
+                  {switchRu}
+                </span>
+              </article>
+
+            </header>
+
+          )}
+      </LanguageContext.Consumer>
     );
   }
 }
