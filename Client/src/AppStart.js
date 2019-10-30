@@ -1,13 +1,18 @@
 /* eslint-disable no-unused-vars */
 
+/* Libraries. */
 import React from "react";
 import { render } from "react-dom";
-import { $ } from "./JS/helpers/domUtils";
 
+/* Project libraries. */
+import { $ } from "./JS/helpers/domUtils";
+/* Project contexts. */
 import { LanguageProvider } from "./JS/contexts/siteLanguageContext.jsx";
+/* Project entry component. */
 import AppContainer from "./JS/components/AppContainer.jsx";
 
-import "./SCSS/style.scss";
+/* United styles. */
+import "./SCSS/AppStyle.scss";
 
 const container = $(".js-app-entry");
 
@@ -19,4 +24,4 @@ render(
   <LanguageProvider>
     <AppContainer />
   </LanguageProvider>,
-  $(".js-app-entry"));
+  container);

@@ -1,0 +1,23 @@
+
+.icon-list {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $font-xl * 2;
+
+  &__item {
+
+    flex: 1 1 100%;
+    text-align: center;
+
+    color: $palette-color2;
+
+    &:hover {
+      color: $palette-color1;
+    }
+
+  }
+
+}

@@ -1,4 +1,18 @@
 
 .main {
 
+  &__aside {
+    background-color:$palette-color2;
+  }
+
+  &__container {
+    background-color:$palette-color4;
+  }
+
+  &__aside,
+  &__container-section {
+    padding: rem(12px);
+  }
+
+
 }

@@ -11,8 +11,13 @@ export default {
   nav: {
 
   },
+  aside: {
+    temp: "aside тест"
+  },
   content: {
-
+    skills: "Навыки",
+    programmLanguages: "Языки программирования",
+    tools: "Инструменты"
   },
   footer: {
 

@@ -9,13 +9,18 @@
 
 /* Elements */
 @import "./common/elements/button";
+@import "./common/elements/iconList";
 @import "./common/elements/switch";
 
 /* Components */
 @import "./components/AppContainer";
 @import "./components/Header";
+@import "./components/Main";
 @import "./components/Navigation";
 @import "./components/Footer";
+
+/* External assets */
+@import "../Assets/fontawesome-free/css/fontawesome.css";
 
 /* Global */
 @import "./common/global";
